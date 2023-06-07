@@ -28,7 +28,12 @@ endif()
 add_executable(odom_to_tf src/odom_to_tf.cpp)
 ament_target_dependencies(odom_to_tf rclcpp tf2_ros nav_msgs geometry_msgs)
 
-install(TARGETS odom_to_tf
+install(TARGETS odom_to_tf 
   DESTINATION lib/${PROJECT_NAME})
+
+install(
+  DIRECTORY config launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()

@@ -1,6 +1,6 @@
 odom_to_tf:
     ros__parameters:
-        odom_topic: "/odom/perfect"
-        frame_id: "world"
-        child_frame_id: "base_link"
+        odom_topic: "/lauron/simulation/odom"
+        frame_id: "lvi_world_simulation"
+        child_frame_id: "lvi_body"
         use_sim_time: True
