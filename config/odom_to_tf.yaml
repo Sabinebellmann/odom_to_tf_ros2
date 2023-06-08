@@ -3,4 +3,4 @@ odom_to_tf:
         odom_topic: "/lauron/simulation/odom"
         frame_id: "lvi_world_simulation"
         child_frame_id: "lvi_body"
-        use_sim_time: True
+        use_sim_time: False
