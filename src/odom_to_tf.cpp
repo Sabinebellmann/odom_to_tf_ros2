@@ -62,17 +62,17 @@ class OdomToTF : public rclcpp::Node {
 
         void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg) {
             m_odom_msg=msg;
-            std::cerr<< "odom received" <<std::endl;
+            //std::cerr<< "odom received" <<std::endl;
             odom_received=true;
         }
         
           // Timer Callback
         void timerCallback()
         {
-             std::cerr<< "timer callback" <<std::endl;
+             //std::cerr<< "timer callback" <<std::endl;
              
             if (odom_received==true){
-                std::cerr<< "time" <<this->get_clock()->now().nanoseconds()<<std::endl;
+                //std::cerr<< "time" <<this->get_clock()->now().nanoseconds()<<std::endl;
                 nav_msgs::msg::Odometry::SharedPtr msg=m_odom_msg;
                 geometry_msgs::msg::TransformStamped tfs_;
                 tfs_.header = msg->header;
